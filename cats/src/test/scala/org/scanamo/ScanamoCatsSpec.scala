@@ -232,7 +232,7 @@ class ScanamoCatsSpec extends AnyFunSpec with Matchers {
       val items = Table[Item](t)
       val ops = for {
         _ <- items.putAll(list.toSet).toFreeT[SIO]
-        list <- items.scanPaginatedM[SIO](1)
+        list <- items.scanPaginatedM[SIO](2)
       } yield list
 
       scanamo.execT(ScanamoCats.ToStream)(ops).compile.toList.unsafeRunSync should contain theSameElementsAs expected
