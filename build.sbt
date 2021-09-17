@@ -49,8 +49,8 @@ def extraOptions(scalaVersion: String) =
   }
 
 val commonSettings = Seq(
-  organization := "org.scanamo",
-  organizationName := "Scanamo",
+  organization := "com.kailuowang",
+  organizationName := "kailuowang",
   startYear := Some(2019),
   homepage := Some(url("http://www.scanamo.org/")),
   licenses += ("Apache-2.0", new URL("https://www.apache.org/licenses/LICENSE-2.0.txt")),
